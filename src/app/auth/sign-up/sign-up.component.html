@@ -1,0 +1,11 @@
+<div>
+    <form action="" class="sign_up_form" [formGroup]="signUpForm">
+        <div class="">SignUp</div>
+        <input type="text" placeholder="Name" id="" formControlName="username">
+        <input type="file"  id="file" (change)="handleFileInput($event.target.files)">
+        <input type="email" placeholder="Email" id="" formControlName="email">
+        <input type="password" placeholder="Password" id="" formControlName="password">
+        <input type="retype_password" placeholder="Retype password" id="" formControlName="retype_password">
+        <button (click)="onSubmitForm()">Отправить</button>
+    </form>
+</div>
