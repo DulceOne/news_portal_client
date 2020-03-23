@@ -30,15 +30,16 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmitForm() {
-    const controls = this.signUpForm.value
+    const controls = this.signUpForm
     var data = new FormData();
-    data.append('avatar', "")//this.file
-    data.append('username', controls.username)
-    data.append('email', controls.email)
-    data.append('password', controls.password)
+    data.append('avatar', this.file)
+    data.append('username', controls.value.username)
+    data.append('email', controls.value.email)
+    data.append('password', controls.value.password)
 
-    this.http.post(EApiUrls.AUTH_SIGNUP,data).subscribe(value =>{
+    this.http.post(EApiUrls.AUTH_SIGNUP,data).subscribe((value: string) =>{
       console.log(value) 
+      controls.reset()
 
     },
     error => {

@@ -1,3 +1,4 @@
 export enum EAppUrls {
-    AUTH = 'auth'
+    AUTH = 'auth',
+    MAIN = 'main',
 }

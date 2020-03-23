@@ -1,0 +1,80 @@
+.header {
+    background-color: black;
+    .header_container {
+        display: flex;
+        width: 1200px;
+        margin: auto;
+        background-color: black;
+        padding-left: 15px;
+        padding-right: 15px;
+        a {
+            transform: skew(-17deg);
+            &:hover .shadow {
+                background-color: transparent;
+                transition: 1s;
+
+            }
+            &:hover .gallery_card {
+                background-size: 125%;
+                transition: .5s;
+            }
+            &:nth-child(1) {
+                border-right: 4px solid #ffc107;
+                border-left: 4px solid #ffc107;
+            }
+            &:nth-child(n+2) {
+                border-right: 4px solid #ffc107;
+            }
+            .gallery_card{
+                background-size: 105%;
+                height: 104px;
+                background-position: center;
+                width: 197px;
+                background-image:  url(../../../assets/img/test.jpg);
+                transition: .5s;
+            }
+            .shadow {
+                transition: 1s;
+                width: 100%;
+                height: 104px;
+                margin-top: -104px;
+                position: absolute;
+                font-family: sans-serif;
+                color: white;
+                background-color: #10101082;
+                line-height: 104px;
+                text-align: center;
+            }
+            
+        }
+    }
+    .info_panel {
+        width: 1200px;
+        padding: 10px;
+        margin: auto;
+        .search {
+            display: flex;
+            input {
+                outline: none;
+                border: none;
+                background-color: white;
+                padding: 6px;
+            }
+            .search_btn {
+                background: #fffefe;
+                padding: 6px;
+                font-family: sans-serif;
+                margin-left: 5px;
+                border-radius: 3px;
+                background-color: #ffc107;
+                color: #878787;
+                transition: 1s;
+                &:hover {
+                    color: white;
+                    cursor: pointer;
+                    transition: 1s;
+                }
+            }
+        }
+    }
+}

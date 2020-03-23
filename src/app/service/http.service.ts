@@ -24,6 +24,12 @@ export class HttpService {
     )as Observable<T>;
   }
 
+  get<T>(url) {
+    return this.http.get(this.fullUrl()+url).pipe(
+      catchError((err) => throwError(err))
+    ) as Observable<T>
+  } 
+
   fullUrl() {
     return environment.apiUrl+environment.prefix
   }
