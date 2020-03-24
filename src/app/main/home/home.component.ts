@@ -12,7 +12,6 @@ export class HomeComponent implements OnInit {
   public news: INews;
   constructor(private http: HttpService) { }
   
-  
 
   ngOnInit() {
     this.getAllNews()

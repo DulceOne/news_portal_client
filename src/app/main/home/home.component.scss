@@ -1,7 +1,7 @@
 .home {
     width: 1200px;
     margin: auto;
-    background-color: #4CAF50;;
+    background-color: black;;
     margin-top: 25px;
     .pane_content {
         padding: 20px;
@@ -32,6 +32,7 @@
                 background-image:  url(../../../assets/img/test.jpg);
                 width: 231px;
                 height: 117px;
+                border: 1px solid #9a6c5c;
             }
             .article_list_item {
             }

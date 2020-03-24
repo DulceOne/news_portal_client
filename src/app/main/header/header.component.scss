@@ -52,6 +52,8 @@
         width: 1200px;
         padding: 10px;
         margin: auto;
+        display: flex;
+        justify-content: space-between;
         .search {
             display: flex;
             input {
@@ -61,20 +63,11 @@
                 padding: 6px;
             }
             .search_btn {
-                background: #fffefe;
-                padding: 6px;
-                font-family: sans-serif;
-                margin-left: 5px;
-                border-radius: 3px;
-                background-color: #ffc107;
-                color: #878787;
-                transition: 1s;
-                &:hover {
-                    color: white;
-                    cursor: pointer;
-                    transition: 1s;
-                }
+               
             }
+        }
+        .auth_container {
+            display: flex;
         }
     }
 }
