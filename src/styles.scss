@@ -113,15 +113,24 @@ body {
                 transition: 3s;
                 cursor: pointer;
             }
-            .title {
-                color: #101010;
+            .wrapper {
                 position: absolute;
-                top: 50%;
+                top: 0px;
+                left: 0px;
+                height: 100%;
                 width: 100%;
-                padding: 4px 0px 4px 0px;
-                background-color: #ffffffa3;
-                text-align: center;
-                border: 1px solid #6b6b6b;
+                display: flex;
+                .title {
+                    color: #101010;
+                    margin: auto;
+                    width: 100%;
+                    padding: 4px 0px 4px 0px;
+                    background-color: #ffffffa3;
+                    text-align: center;
+                    border-top: 1px solid #6b6b6b;
+                    border-bottom: 1px solid #6b6b6b;
+                }
+
             }
         }
     }

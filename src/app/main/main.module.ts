@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { OwlCaruselComponent } from '../core/libs/owl-carusel/owl-carusel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { NewsComponent } from './home/news/news.component';
+
 
 const routes: Routes = [
   {
@@ -16,6 +18,10 @@ const routes: Routes = [
       {
         path: 'home',
         component: HomeComponent
+      },
+      {
+        path: 'home/news/:id',
+        component: NewsComponent
       }
     ]
   },
@@ -28,6 +34,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     OwlCaruselComponent,
+    NewsComponent,
   ],
   imports: [
     CarouselModule,

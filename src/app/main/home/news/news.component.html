@@ -1,0 +1,11 @@
+<div class="news">
+    <h2 class="title">{{newsId.title}}</h2>
+    <div class="galery">
+        <div class="img" style="background-image: url({{newsId.image}});"></div>
+    </div>
+    <div class="content" >
+        <div class="news_content" [innerHTML]="newsId.info">
+            {{newsId.info}}
+        </div>
+    </div>
+</div>

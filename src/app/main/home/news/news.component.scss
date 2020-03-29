@@ -1,0 +1,39 @@
+.news {
+    width: 1200px;
+    margin: auto;
+    background-color: black;;
+    margin-top: 25px;
+    color: white;
+    .title {
+        border-bottom: 1px solid #FFC107;
+        padding: 10px;
+        margin: 0px;
+    }
+    .galery {
+        .img {
+            // background-image: url(../../../../assets/img/test2.jpg);
+            min-height: 500px; 
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .content {
+        background-color: black;
+        width: 1200px;
+        font-size: 1rem !important;
+        line-height: 1.5;
+        letter-spacing: 1.6px;
+        .news_content {
+            padding: 20px;
+            figure {
+                width: 200px;;
+                img {
+                    max-width: 100% !important;
+                }
+            }
+        }
+    }
+}

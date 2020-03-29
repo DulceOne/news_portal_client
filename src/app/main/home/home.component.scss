@@ -35,6 +35,19 @@
                 border: 1px solid #9a6c5c;
             }
             .article_list_item {
+                color: white;
+                width: 80%;
+                word-break: break-all;
+                padding: 0px 20px 0px 20px;
+                .date {
+                    color: #9E9E9E;         
+
+                }
+                .content {
+                    font-size: 1rem !important;
+                    line-height: 1.5;
+                    letter-spacing: 1.6px;
+                }
             }
         }
     }

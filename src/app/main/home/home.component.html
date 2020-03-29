@@ -1,13 +1,18 @@
 <div class="home">
-    <app-owl-carusel></app-owl-carusel>
+    <div *ngIf="news">
+        <app-owl-carusel  [owlNews]="news"></app-owl-carusel>
+    </div>
     <div class="pane_content">
         <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
-        <div class="list_item" *ngFor="let item of news">
-            <div class="img"></div>
+        <div class="list_item" *ngFor="let item of news" routerLink="/main/home/news/{{item._id}}">
+            <div class="img" style="background-image:  url({{item.image}}); "></div>
             <div class="article_list_item">
                 <div class="title">{{item.title}}</div>
                 <div class="date">{{item.date}}</div>
-                <div class="content">{{item.content}}</div>
+                <!-- <div class="content" >{{item.info | slice:1:300}}...</div> -->
+                <div class="content" >{{item.short_info}}...</div>
+                
+
             </div>
         </div>
     </div>

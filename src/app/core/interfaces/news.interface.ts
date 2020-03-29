@@ -8,4 +8,5 @@ export interface INews {
     info: String,
     genre: String,
     priority: String,
+    length?: number
 }

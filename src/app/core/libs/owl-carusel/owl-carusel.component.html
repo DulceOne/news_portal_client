@@ -1,23 +1,12 @@
 <owl-carousel-o [options]="customOptions">
-  <ng-template carouselSlide>
-    <div class="owl_container">
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""><div class="title">Is Beyong & As Good As You Remembr | Nostalgia</div></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""><div class="title">sfhtnrfngcg</div></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""><div class="title">sfhtnrfngcg</div></div>
-        <div class="news"><img src="../../../../assets/img/test.jpg" alt=""><div class="title">sfhtnrfngcg</div></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""><div class="title">sfhtnrfngcg</div></div>
-        <div class="news"><img src="../../../../assets/img/test.jpg" alt=""><div class="title">sfhtnrfngcg</div></div>
+  <ng-template carouselSlide *ngFor="let item of subarray">
+    <div class="owl_container" >
+        <div class="news" *ngFor="let item2 of item">
+          <img src="{{item2.image}}" alt="">
+          <div class="wrapper" routerLink="/main/home/news/{{item2._id}}">
+            <div class="title">{{item2.title}}</div>
+          </div>
+        </div>
     </div>
   </ng-template> 
-  <ng-template carouselSlide>
-    <div class="owl_container">
-        <div class="news"><img src="../../../../assets/img/test.jpg" alt=""></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""></div>
-        <div class="news"><img src="../../../../assets/img/test.jpg" alt=""></div>
-        <div class="news"><img src="../../../../assets/img/test2.jpg" alt=""></div>
-        <div class="news"><img src="../../../../assets/img/test.jpg" alt=""></div>
-    </div>
-  </ng-template>  
-  
 </owl-carousel-o>

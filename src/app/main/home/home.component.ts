@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../service/http.service';
-import { EApiUrls } from '../../core/enums/api-urls.enums'
+import { EApiUrls } from '../../core/enums/api-urls.enums';
 import { INews } from '../../core/interfaces/news.interface';
 
 @Component({
@@ -11,7 +11,6 @@ import { INews } from '../../core/interfaces/news.interface';
 export class HomeComponent implements OnInit {
   public news: INews;
   constructor(private http: HttpService) { }
-  
 
   ngOnInit() {
     this.getAllNews()
@@ -20,6 +19,7 @@ export class HomeComponent implements OnInit {
   getAllNews() {
     this.http.get(EApiUrls.NEWS).subscribe((value: INews) =>{
       this.news = value
+     
 
 
     },
