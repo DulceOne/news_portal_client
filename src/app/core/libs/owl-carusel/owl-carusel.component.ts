@@ -8,8 +8,8 @@ import { INews } from '../../interfaces/news.interface';
   styleUrls: ['./owl-carusel.component.scss']
 })
 export class OwlCaruselComponent implements OnInit {
-  @Input() owlNews: INews;
-  public subarray: [];
+  @Input() owlNews: INews[];
+  public subarray: INews[][] = [];
 
   customOptions: OwlOptions = {
     loop: true,
@@ -46,9 +46,7 @@ export class OwlCaruselComponent implements OnInit {
 
   settingNews() {
     let size = 6; //размер подмассива
-    this.subarray = []; //массив в который будет выведен результат.
     for (let i = 0; i <Math.ceil(this.owlNews.length/size); i++) {
-      /* tslint:disable */
       this.subarray[i] = this.owlNews.slice((i*size), (i*size) + size);
     }
   }

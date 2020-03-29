@@ -1,11 +1,10 @@
-<div class="news">
-    <h2 class="title">{{newsId.title}}</h2>
+<div *ngIf="item" class="news">
+    <h2 class="title">{{item.title}}</h2>
     <div class="galery">
-        <div class="img" style="background-image: url({{newsId.image}});"></div>
+        <div class="img" style="background-image: url({{item.image}});"></div>
     </div>
     <div class="content" >
-        <div class="news_content" [innerHTML]="newsId.info">
-            {{newsId.info}}
+        <div class="news_content" [innerHTML]="item.info">
         </div>
     </div>
 </div>

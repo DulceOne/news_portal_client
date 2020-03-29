@@ -12,7 +12,7 @@ import { INews } from '../../../core/interfaces/news.interface'
 })
 export class NewsComponent implements OnInit {
   id: String;
-  newsId: INews;
+  item: INews;
      
   
   constructor(private activateRoute: ActivatedRoute, private http: HttpService) {
@@ -25,7 +25,7 @@ export class NewsComponent implements OnInit {
 
   getNewsById() {
     this.http.get(EApiUrls.NEWS+'/'+this.id).subscribe((value: INews)=> {
-      this.newsId = value
+      this.item = value
     },
     error => {
 

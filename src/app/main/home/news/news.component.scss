@@ -28,10 +28,9 @@
         letter-spacing: 1.6px;
         .news_content {
             padding: 20px;
-            figure {
-                width: 200px;;
+            ::ng-deep {
                 img {
-                    max-width: 100% !important;
+                    max-width: 100%;
                 }
             }
         }
