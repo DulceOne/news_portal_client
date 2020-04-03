@@ -9,7 +9,7 @@ import { INews } from '../../core/interfaces/news.interface';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public news: INews;
+  public news: INews; //toDo news у тебя массив тогда и обзывай его массивом INews[]
   constructor(private http: HttpService) { }
 
   ngOnInit() {
@@ -17,11 +17,8 @@ export class HomeComponent implements OnInit {
   }
 
   getAllNews() {
-    this.http.get(EApiUrls.NEWS).subscribe((value: INews) =>{
+    this.http.get(EApiUrls.NEWS).subscribe((value: INews) =>{ //toDo Тоже саммое тут
       this.news = value
-     
-
-
     },
     error => {
       // error - объект ошибки
