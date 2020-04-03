@@ -18,7 +18,7 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'home',
+        path: 'home', // toDo ты же уже умеешь выносиить пути в enum =)
         component: HomeComponent
       },
       {

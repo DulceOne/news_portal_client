@@ -10,6 +10,7 @@ import { INews } from '../../core/interfaces/news.interface';
 })
 export class HomeComponent implements OnInit {
   public news: INews[];
+
   constructor(private http: HttpService) { }
 
   ngOnInit() {
