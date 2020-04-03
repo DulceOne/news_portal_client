@@ -45,6 +45,10 @@ export class OwlCaruselComponent implements OnInit {
   }
 
   settingNews() {
+    this.owlNews = this.owlNews.filter(function(number) {
+      return number.priority == 'main'
+    });
+    
     let size = 6; //размер подмассива
     for (let i = 0; i <Math.ceil(this.owlNews.length/size); i++) {
       this.subarray[i] = this.owlNews.slice((i*size), (i*size) + size);
