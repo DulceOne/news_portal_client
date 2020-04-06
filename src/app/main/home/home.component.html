@@ -13,7 +13,9 @@
             </div>
         </div>
     </div>
-    <app-paginator></app-paginator>
+    <div class="paginator">
+        <ngb-pagination [collectionSize]="collections" [(page)]="page" (pageChange)="getAllNews($event)"  [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+    </div>
 </div>
 
 

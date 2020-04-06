@@ -22,7 +22,7 @@ export class NewsComponent implements OnInit  {
   }
   
   getNewsById() {
-    this.http.get(EApiUrls.NEWS+'/'+this.id).subscribe((value: INews) => {
+    this.http.get(EApiUrls.NEWS_ID+this.id).subscribe((value: INews) => {
       this.item = value
     },
     error => {

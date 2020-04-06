@@ -1,11 +1,14 @@
 <div class="header">
-    <div class="header_container">
-        <a href=""><div class="gallery_card"></div><div class="shadow">Minecraft</div></a>
-        <a href=""><div class="gallery_card"></div><div class="shadow">qwe</div></a>
-        <a href=""><div class="gallery_card"></div><div class="shadow">qwe</div></a>
-        <a href=""><div class="gallery_card"></div><div class="shadow">qwe</div></a>
-        <a href=""><div class="gallery_card"></div><div class="shadow">qwe</div></a>
-        <a href=""><div class="gallery_card"></div><div class="shadow">qwe</div></a>
+    <div class="header_container"  >
+       
+        <div  *ngIf="games">
+            
+            <a href="" *ngFor="game of games"><div class="gallery_card"></div><div class="shadow">{{game._id}}</div></a>
+
+        </div>
+
+     
+        
     </div>
     <div class="info_panel">
         <div class="search">

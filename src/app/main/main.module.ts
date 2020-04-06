@@ -8,8 +8,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OwlCaruselComponent } from '../core/libs/owl-carusel/owl-carusel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NewsComponent } from './home/news/news.component';
-import { PaginatorComponent } from '../core/libs/paginator/paginator.component';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 const routes: Routes = [
@@ -37,11 +36,11 @@ const routes: Routes = [
     FooterComponent,
     OwlCaruselComponent,
     NewsComponent,
-    PaginatorComponent
   ],
   imports: [
     CarouselModule,
     CommonModule,
+    NgbModule,
     RouterModule.forChild(routes)
   ]
 })

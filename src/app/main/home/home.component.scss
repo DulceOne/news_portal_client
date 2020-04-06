@@ -51,4 +51,10 @@
             }
         }
     }
+    .paginator {
+        display: flex;
+        ngb-pagination {
+            margin: auto;
+        }
+    }
 }
