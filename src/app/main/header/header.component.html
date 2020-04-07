@@ -1,14 +1,7 @@
 <div class="header">
     <div class="header_container"  >
-       
-        <div  *ngIf="games">
-            
-            <a href="" *ngFor="game of games"><div class="gallery_card"></div><div class="shadow">{{game._id}}</div></a>
-
-        </div>
-
-     
-        
+        <a href="" ><div class="gallery_card" ></div><div class="shadow">HOME</div></a>
+        <a href="" *ngFor="let game of games"><div class="gallery_card" style=" background-image: url({{game.image}})"></div><div class="shadow">{{game.name}}</div></a>
     </div>
     <div class="info_panel">
         <div class="search">

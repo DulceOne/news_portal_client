@@ -23,7 +23,6 @@ export class HeaderComponent implements OnInit {
   getGames() {
     this.http.get(EApiUrls.GAMES).subscribe((value: IResponse) => {
       this.games = value.data
-      console.log(this.games)
     },
     error => {
 

@@ -16,18 +16,29 @@ export interface IResponse {
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public news: INews[];
+  public defoultNews: INews[];
   public collections: Number;
 
   constructor(private http: HttpService) { }
 
   ngOnInit() {
-    this.getAllNews(1)
+    this.getDefoultNews(1)
   }
 
-  getAllNews(page) {
-    this.http.get(EApiUrls.NEWS+"?page="+page).subscribe((value: IResponse) =>{
-      this.news = value.data
+  // getAllNews(page) {
+  //   this.http.get(EApiUrls.NEWS+"?page="+page).subscribe((value: IResponse) =>{
+  //     this.news = value.data
+  //     this.collections = value.collections
+  //   },
+  //   error => {
+  //     // error - объект ошибки
+  //   });
+  // }
+
+  getDefoultNews(page) {
+    this.http.get(EApiUrls.DEFAULT_NEWS+"?page="+page).subscribe((value: IResponse) =>{
+      this.defoultNews = value.data
+      console.log(this.defoultNews)
       this.collections = value.collections
     },
     error => {
