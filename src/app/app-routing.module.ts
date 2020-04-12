@@ -13,6 +13,11 @@ const routes: Routes = [
     path: EAppUrls.MAIN,
     loadChildren: () => MainModule,
   },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'main/news',
+  },
 ];
 
 @NgModule({
