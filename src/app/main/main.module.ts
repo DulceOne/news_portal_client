@@ -8,7 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import { OwlCaruselComponent } from '../core/libs/owl-carusel/owl-carusel.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { NewsComponent } from './home/news/news.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GameComponent } from './home/game/game.component';
 
 
 const routes: Routes = [
@@ -17,12 +18,16 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: 'home', // toDo ты же уже умеешь выносиить пути в enum =)
+        path: 'news', // toDo ты же уже умеешь выносиить пути в enum =)
         component: HomeComponent
       },
       {
-        path: 'home/news/:id',
+        path: 'news/:id',
         component: NewsComponent
+      },
+      {
+        path: 'news/game/:id',
+        component: HomeComponent
       }
     ]
   },
@@ -36,6 +41,7 @@ const routes: Routes = [
     FooterComponent,
     OwlCaruselComponent,
     NewsComponent,
+    GameComponent,
   ],
   imports: [
     CarouselModule,

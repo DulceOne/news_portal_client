@@ -5,5 +5,6 @@ export enum EApiUrls {
     NEWS_ID = 'v1/news/id/',
     GAMES = 'v1/game',
     DEFAULT_NEWS = 'v1/news/default',
-    MAIN_NEWS = 'v1/news/main'
+    MAIN_NEWS = 'v1/news/main',
+    GAME_NEWS="v1/news/game/"
 }

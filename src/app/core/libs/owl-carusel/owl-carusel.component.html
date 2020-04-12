@@ -3,7 +3,7 @@
     <div class="owl_container" >
         <div class="news" *ngFor="let item2 of item">
           <img src="{{item2.image}}" alt="">
-          <div class="wrapper" routerLink="/main/home/news/{{item2._id}}">
+          <div class="wrapper" routerLink="/main/news/{{item2.slug}}">
             <div class="title">{{item2.title}}</div>
             <div class="short_description">{{item2.short_info }}</div>
           </div>

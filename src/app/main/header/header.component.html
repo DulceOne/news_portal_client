@@ -1,7 +1,17 @@
 <div class="header">
     <div class="header_container"  >
-        <a href="" ><div class="gallery_card" ></div><div class="shadow">HOME</div></a>
-        <a href="" *ngFor="let game of games"><div class="gallery_card" style=" background-image: url({{game.image}})"></div><div class="shadow">{{game.name}}</div></a>
+        <div class="wrap_game" *ngIf="games">
+            <div class="game" routerLink="news">
+                <div class="gallery_card" ></div><div class="shadow">HOME</div>
+            </div>
+            <div class="game" (click)="reDraw()" routerLink="news/game/{{game.slug}}" *ngFor="let game of games">
+                <div class="gallery_card" style=" background-image: url({{game.image}})">
+                </div>
+                <div class="shadow">
+                    {{game.name}}
+                </div>
+            </div>
+        </div>
     </div>
     <div class="info_panel">
         <div class="search">

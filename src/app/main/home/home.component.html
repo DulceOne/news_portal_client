@@ -4,7 +4,7 @@
     <!-- </div> -->
     <div class="pane_content">
         <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
-        <div class="list_item" *ngFor="let item of defoultNews" routerLink="/main/home/news/{{item._id}}">
+        <div class="list_item" *ngFor="let item of defoultNews" routerLink="/main/news/{{item.slug}}">
             <div class="img" style="background-image:  url({{item.image}}); "></div>
             <div class="article_list_item">
                 <div class="title">{{item.title}}</div>
@@ -14,7 +14,7 @@
         </div>
     </div>
     <div class="paginator">
-        <ngb-pagination [collectionSize]="collections" [(page)]="page" (pageChange)="getDefoultNews($event)"  [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
+        <ngb-pagination [collectionSize]="collections"  (pageChange)="setPage($event)"  [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
     </div>
 </div>
 

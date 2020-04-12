@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://build-api-news-portal.herokuapp.com',
+  // apiUrl: 'https://build-api-news-portal.herokuapp.com',
+  apiUrl: 'http://api.news-portal.ga',
   prefix: '/api/'
 };
 

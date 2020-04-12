@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../../service/http.service';
 import { EApiUrls } from '../../core/enums/api-urls.enums';
 import { IGames } from '../../core/interfaces/game.interface';
+import { TransfertService } from '../../core/services/transfert.service';
 
 export interface IResponse {
   data: IGames[];
@@ -14,7 +15,7 @@ export interface IResponse {
 })
 export class HeaderComponent implements OnInit {
   public games: IGames[];
-  constructor(private http: HttpService) { }
+  constructor(private http: HttpService, private sTransfert: TransfertService) { }
 
   ngOnInit() {
     this.getGames()
@@ -27,6 +28,10 @@ export class HeaderComponent implements OnInit {
     error => {
 
     });
+  }
+
+  reDraw() {
+    this.sTransfert.setData(true)
   }
 
 }
