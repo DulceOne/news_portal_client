@@ -21,9 +21,14 @@ export class HeaderComponent implements OnInit {
     this.getGames()
   }
 
+
   getGames() {
     this.http.get(EApiUrls.GAMES).subscribe((value: IResponse) => {
       this.games = value.data
+
+      this.games = this.games.filter(function(number,i) {
+        return i < 5;
+      });
     },
     error => {
 

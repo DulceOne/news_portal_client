@@ -5,4 +5,5 @@ export interface IGames {
     company: String,
     link: String,
     genre: String,
+    slug: String
 }

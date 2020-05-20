@@ -1,7 +1,5 @@
 <div class="home">
-    <!-- <div *ngIf="news"> -->
-        <app-owl-carusel ></app-owl-carusel>
-    <!-- </div> -->
+    <app-owl-carusel *ngIf="!id"></app-owl-carusel>
     <div class="pane_content">
         <h2>ПОСЛЕДНИЕ НОВОСТИ</h2>
         <div class="list_item" *ngFor="let item of defoultNews" routerLink="/main/news/{{item.slug}}">

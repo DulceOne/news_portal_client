@@ -11,8 +11,10 @@ import { EApiUrls } from '../../core/enums/api-urls.enums';
 export class SignInComponent implements OnInit {
   signInForm: FormGroup;
 
-  constructor(private fb: FormBuilder,
-              private http: HttpService) {
+  constructor(
+      private fb: FormBuilder,
+      private http: HttpService
+    ) {
     this.signInForm = this.fb.group({
       username : [''],
       password : [''],
